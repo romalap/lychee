@@ -20,7 +20,7 @@ pipeline {
         }
       }
     }
-    stage('Deploy Image') {
+    stage('PUSH image') {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
@@ -32,7 +32,7 @@ pipeline {
     stage('Remove Unused docker image') {
       steps{
         sh """
-        docker rmi \$(docker images -f dangling=true -q) -f
+        docker image prune -f
         """
       }
     }
