@@ -4,7 +4,7 @@ pipeline {
     registryCredential = 'dockerhub'
   }
   parameters {
-    choice(name: 'VERSION', choices: ['dev', 'v4.4.0'], description: 'Pick the VERSION')
+    choice(name: 'VERSION', choices: ['dev', '4.4.0'], description: 'Pick the VERSION')
     }
   agent any
   stages {
