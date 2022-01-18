@@ -1,0 +1,16 @@
+pipeline {
+    parameters {
+    choice(name: 'VERSION', choices: ['v4.4.0'], description: 'Pick the VERSION')
+    }
+    agent any 
+    stages {
+        stage('run_docker') {
+            steps {
+            sh """
+            docker-compose down
+            docker-compose up -d
+            """
+            }
+        }
+    }
+}
