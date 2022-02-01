@@ -17,14 +17,15 @@ services:
     networks:
       - lychee
   lychee:
-    image: devvetton/lychee:v4.4.0
+    image: devvetton/lychee:dev
     container_name: lychee
     restart: always
     depends_on:
       - lychee_db
     volumes:
-      - /data/lychee/config:/config
-      - /data/lychee/pictures:/pictures
+      - /data/lychee/conf:/conf
+      - /data/lychee/uploads:/uploads
+      - /data/lychee/sym:/sym
     environment:
       - DB_HOST=lychee_db
       - DB_USERNAME=lychee

@@ -13,16 +13,15 @@ DB: MariaDB
 
 ### Deployment flow
 
-GitHub push webhook to Jenkins.
+With new commit GitHub push webhook to Jenkins.
 Jenkins runs a job, which downloads new build from git "lychee".
 Job builds docker image and pushes to docker registry.
-Triger runs next job, which deploys new image to the node.
-If build or push or deploy is failed,then nofitication will be send to Slack.
+Triger runs next job, which deploy new image to the node.
 
 ### Rollback flow description
 
 Jenkins deploy job checks connection to the web application.
-If site is unreacheble, previous docker image will be redeployd.
+If application is unreacheble, previous docker image will be redeployd.
 
 ## Links
 
