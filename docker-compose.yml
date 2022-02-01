@@ -24,7 +24,7 @@ services:
       - lychee_db
     volumes:
       - /data/lychee/conf:/conf
-      - /data/lychee/uploads:/uploads
+      - /data/lychee/uploads:public/uploads/
       - /data/lychee/sym:/sym
     environment:
       - DB_HOST=lychee_db
