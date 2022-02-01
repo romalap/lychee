@@ -73,7 +73,7 @@ RUN \
 COPY default.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
-VOLUME /conf /public/uploads/ /sym
+VOLUME /conf /uploads /sym
 
 WORKDIR /var/www/html/Lychee
 

@@ -24,9 +24,10 @@ services:
       - lychee_db
     volumes:
       - /data/lychee/conf:/conf
-      - /data/lychee/uploads:/public/uploads/
+      - /data/lychee/uploads:/uploads
       - /data/lychee/sym:/sym
     environment:
+      - DB_CONNECTION=mysql
       - DB_HOST=lychee_db
       - DB_USERNAME=lychee
       - DB_PASSWORD=dbpassword
@@ -35,6 +36,7 @@ services:
       - PGID=1000
       - PUID=1000
       - TZ=Europe/London
+      - STARTUP_DELAY=30
     networks:
       - lychee
     ports:
