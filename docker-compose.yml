@@ -5,7 +5,7 @@ services:
     image: mariadb:10
     restart: always
     volumes:
-      - /data/lychee/mariadb1:/var/lib/mysql
+      - /data/lychee/mariadb:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
       - MYSQL_DATABASE=lychee
