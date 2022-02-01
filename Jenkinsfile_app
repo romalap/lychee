@@ -1,6 +1,6 @@
 pipeline {
     parameters {
-    choice(name: 'VERSION', choices: ['dev'], description: 'Pick the VERSION')
+    choice(name: 'VERSION', choices: ['dev', 'release'], description: 'Pick the VERSION')
     }
     agent any 
     stages {
@@ -8,6 +8,7 @@ pipeline {
             steps {
             sh """
             docker-compose down
+            echo "VERSION=${params.VERSION}" > .env
             docker-compose up -d
             """
             }
