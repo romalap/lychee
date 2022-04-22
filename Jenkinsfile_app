@@ -1,6 +1,6 @@
 pipeline {
     parameters {
-    choice(name: 'VERSION', choices: ['dev', 'release'], description: 'Pick the VERSION')
+    choice(name: 'VERSION', choices: ['dev', 'latest', 'testing'], description: 'Pick the VERSION')
     }
     agent any 
     stages {
