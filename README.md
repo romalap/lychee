@@ -27,4 +27,4 @@ If application is unreacheble, previous docker image will be redeployd.
 
 [Jenkinsfile & Dockerfiles repo](https://github.com/romalap/lychee)
 
-[DockerHub repo](https://hub.docker.com/repository/docker/devvetton/lychee)
+[DockerHub repo](https://hub.docker.com/r/devvetton/lychee)
