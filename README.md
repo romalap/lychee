@@ -1,7 +1,7 @@
 # Lychee
 
-[Jenkins](http://romalap.com/)
-[Deployed app](http://romalap.com:8000/)
+[Jenkins](http://jenkins.romalap.com/)
+[Deployed app](http://lychee.romalap.com/)
 
 ## Description of application for deployment
 
