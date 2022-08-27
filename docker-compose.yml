@@ -17,7 +17,7 @@ services:
     networks:
       - lychee
   lychee:
-    image: devvetton/lychee:dev
+    image: devvetton/lychee:${VERSION}
     container_name: lychee
     restart: always
     depends_on:
